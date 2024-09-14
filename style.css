@@ -1,0 +1,134 @@
+* {
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+body {
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+h1 {
+    color: #03d7f3; 
+    margin: 0;
+    padding: 20px;
+    font-size: 2.5rem;
+}
+
+.turn-container {
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+}
+
+.turn-container h3 {
+    margin: 0;
+    grid-column: span 2;
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+.turn-container .turn-box {
+    border: 2px solid #000;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.x-turn {
+    color: #00e10b; 
+}
+
+.o-turn {
+    color: #03d7f3;
+}
+
+.turn-container .turn-box.active {
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #03d7f3; 
+    z-index: -1;
+    border-radius: 0 0 10px 10px; 
+    transition: left 0.3s ease;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 2px solid #000;
+}
+
+.box {
+    cursor: pointer;
+    font-size: 3rem; 
+    font-weight: 700;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box.x-marker {
+    color: #00e10b; 
+}
+
+.box.o-marker {
+    color: #03d7f3; 
+}
+
+.box:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+#play-again {
+    background-color: #03d7f3; 
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#play-again:hover {
+    padding: 10px 40px;
+    background-color: #00e10b; 
+    color: #000;
+}
+
+
+#game-title {
+    color: #ffffff; 
+    font-size: 3rem; 
+    font-weight: 700; 
+    margin-bottom: 20px;
+}
